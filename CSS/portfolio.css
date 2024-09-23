@@ -1,0 +1,203 @@
+/* --- Variables CSS: facilita los cambios globales de estilo --- */
+:root {
+    --primary-color: #ff6600; /* Color vibrante que representa energía y acción */
+    --secondary-color: #333; /* Color para contrastar los textos y fondos */
+    --accent-color: #4caf50; /* Un verde para elementos de énfasis, como botones */
+    --background-color: #f4f4f9; /* Fondo suave */
+    --text-color: #333; /* Color principal del texto */
+    --light-text: #fff; /* Texto en color claro para usar en botones o fondos oscuros */
+    --font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+    --font-family-alt: 'Poppins', sans-serif; /* Fuente secundaria */
+    --transition-speed: 0.3s; /* Velocidad de las transiciones */
+}
+
+/* --- Estilos básicos y estructura global --- */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-family-alt);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* --- Diseño del menú de navegación --- */
+nav {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--light-text);
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color var(--transition-speed);
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* --- Encabezado con imagen de fondo personalizada --- */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/fondo_portfolio.jpg') no-repeat center center/cover;
+    height: 60vh;
+    color: var(--light-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Estilo de las secciones individuales --- */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(240, 240, 240, 0.9); /* Fondo suave gris claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+section h2:after {
+    content: '';
+    width: 80px;
+    height: 5px;
+    background-color: var(--accent-color);
+    display: block;
+    margin: 10px auto;
+    border-radius: 3px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* --- Estilos para el contenedor de artículos --- */
+article {
+    background-color: #e0f7fa; /* Fondo azul claro para el artículo */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform var(--transition-speed); /* Transición suave */
+}
+
+article:hover {
+    transform: scale(1.05); /* Aumento de tamaño al pasar el ratón */
+}
+
+/* --- Estilos para los divs dentro de las secciones --- */
+div {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(240, 240, 240, 0.8); /* Fondo gris suave */
+    border-radius: 5px;
+}
+
+/* --- Botones --- */
+.btn {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-links {
+    margin-top: 20px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: color var(--transition-speed);
+}
+
+footer .social-links a:hover {
+    color: var(--accent-color);
+}
