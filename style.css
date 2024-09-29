@@ -1,7 +1,7 @@
 /* --- Variables CSS: facilita los cambios globales de estilo --- */
 :root {
     --primary-color: #ff6600; /* Color vibrante que representa energía y acción */
-    --secondary-color: #333; /* Color para contrastar los textos y fondos */
+    --secondary-color: #000; /* Color para contrastar los textos y fondos */
     --accent-color: #4caf50; /* Un verde para elementos de énfasis, como botones */
     --background-color: #f4f4f9; /* Fondo suave */
     --text-color: #333; /* Color principal del texto */
@@ -10,8 +10,6 @@
     --font-family-alt: 'Poppins', sans-serif; /* Fuente secundaria */
     --transition-speed: 0.3s; /* Velocidad de las transiciones */
 }
-
-/* --- Estilos básicos y estructura global --- */
 body {
     font-family: var(--font-family);
     background-color: var(--background-color);
@@ -20,6 +18,9 @@ body {
     color: var(--text-color);
     line-height: 1.6;
 }
+
+/* --- Estilos básicos y estructura global --- */
+
 
 a {
     text-decoration: none;
@@ -81,6 +82,7 @@ header h1 {
 }
 
 header p {
+    color:#070707;
     font-size: 1.5rem;
     margin-top: 10px;
     font-weight: 300;
@@ -123,7 +125,7 @@ section h2:after {
 
 section p {
     font-size: 1.1rem;
-    color: var(--secondary-color);
+    color: #000;
     max-width: 800px;
     margin: 0 auto;
 }
